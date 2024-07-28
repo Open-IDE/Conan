@@ -1,0 +1,5 @@
+---
+#https://docs.conan.io/2/installation.html#install-with-pipx
+- name: Install Conan with pipx
+  community.general.pipx:
+    name: conan

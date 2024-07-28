@@ -1,0 +1,22 @@
+---
+- name: Install pip
+  ansible.builtin.apt:
+    name: python3-pip
+    state: present
+  become: true
+  when: not pipx
+
+- name: Pip
+  include_tasks: pip/main.yml
+  when: not pipx
+
+- name: Install pipx
+  ansible.builtin.apt:
+    name: pipx
+    state: present
+  become: true
+  when: pipx
+
+- name: PipX
+  include_tasks: pipx/main.yml
+  when: pipx

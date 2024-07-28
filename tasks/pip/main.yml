@@ -1,0 +1,5 @@
+---
+#https://docs.conan.io/2/installation.html
+- name: Install Conan with pip (recommended)
+  ansible.builtin.pip:
+    name: conan
